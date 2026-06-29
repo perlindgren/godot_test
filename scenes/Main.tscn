@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://clfjrvlttp5ai"]
+
+[ext_resource type="PackedScene" uid="uid://cux50outl2oga" path="res://scenes/background.tscn" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://db23ehr261vg2" path="res://scenes/block.tscn" id="4_rarhs"]
+[ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
+[ext_resource type="Script" uid="uid://cioajasbe8blc" path="res://scenes/character_body_2d.gd" id="6_c01mt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srqkv"]
+size = Vector2(1000, 50)
+
+[node name="Main" type="Node" unique_id=1471843199]
+
+[node name="Background" parent="." unique_id=1679389528 instance=ExtResource("1_elqb8")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1627363704]
+script = ExtResource("6_c01mt")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CharacterBody2D" unique_id=1967028994]
+offset_left = -10.0
+offset_top = -15.0
+offset_right = 10.0
+offset_bottom = 15.0
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1154627645]
+shape = SubResource("CapsuleShape2D_ifug4")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=2063357415]
+position = Vector2(505, 694)
+physics_material_override = ExtResource("4_vcsgt")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=228682613]
+shape = SubResource("RectangleShape2D_srqkv")
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1049452797]
+offset_left = -500.0
+offset_top = -25.0
+offset_right = 500.0
+offset_bottom = 25.0
+
+[node name="Block1" parent="." unique_id=1469617117 instance=ExtResource("4_rarhs")]
+position = Vector2(529, 188)
+
+[node name="Block2" parent="." unique_id=892160298 instance=ExtResource("4_rarhs")]
+position = Vector2(911, 128)
+
+[node name="Block3" parent="." unique_id=1412921279 instance=ExtResource("4_rarhs")]
+position = Vector2(226, 146)
+
+[node name="Block4" parent="." unique_id=374550645 instance=ExtResource("4_rarhs")]
+position = Vector2(773, 86)
+
+[node name="Block5" parent="." unique_id=1345913697 instance=ExtResource("4_rarhs")]
+position = Vector2(362, 264)
