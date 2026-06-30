@@ -13,7 +13,6 @@
 size = Vector2(1280, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
-load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -40,6 +39,8 @@ color = Color(1, 1, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1154627645]
 shape = SubResource("CapsuleShape2D_ifug4")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1344637096]
+
 [node name="Floor" type="StaticBody2D" parent="." unique_id=2063357415]
 position = Vector2(504, 696)
 physics_material_override = ExtResource("4_vcsgt")
@@ -50,6 +51,21 @@ position = Vector2(136, 0)
 shape = SubResource("RectangleShape2D_srqkv")
 
 [node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1049452797]
+offset_left = -504.0
+offset_top = -25.0
+offset_right = 776.0
+offset_bottom = 25.0
+
+[node name="Floor2" type="StaticBody2D" parent="." unique_id=2135708409]
+position = Vector2(1912, 696)
+physics_material_override = ExtResource("4_vcsgt")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" unique_id=1517472026]
+position = Vector2(136, 0)
+shape = SubResource("RectangleShape2D_srqkv")
+
+[node name="ColorRect" type="ColorRect" parent="Floor2" unique_id=102892704]
 offset_left = -504.0
 offset_top = -25.0
 offset_right = 776.0
@@ -71,12 +87,16 @@ position = Vector2(773, 86)
 position = Vector2(362, 264)
 
 [node name="Platform1" parent="." unique_id=240914463 instance=ExtResource("5_vcsgt")]
-position = Vector2(680, 368)
+position = Vector2(712, 368)
 scale = Vector2(20, 1)
 
 [node name="Platform2" parent="." unique_id=766685792 instance=ExtResource("5_vcsgt")]
-position = Vector2(408, 504)
+position = Vector2(416, 504)
 scale = Vector2(10, 1)
+
+[node name="Platform3" parent="." unique_id=833214675 instance=ExtResource("5_vcsgt")]
+position = Vector2(1312.0001, 512)
+scale = Vector2(20, 1)
 
 [node name="UntitledArtwork145" type="Sprite2D" parent="." unique_id=645079515]
 position = Vector2(51, 642)
