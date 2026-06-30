@@ -5,10 +5,12 @@
 [node name="Block" type="RigidBody2D" unique_id=1469617117]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1564871932]
+visible = false
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
+color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1089952873]
 shape = SubResource("RectangleShape2D_srqkv")

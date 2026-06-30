@@ -21,10 +21,8 @@ load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.0
-offset_top = -1.0
-offset_right = -3.0
-offset_bottom = -1.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -43,7 +41,7 @@ color = Color(1, 1, 0, 1)
 shape = SubResource("CapsuleShape2D_ifug4")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=2063357415]
-position = Vector2(504, 688)
+position = Vector2(504, 696)
 physics_material_override = ExtResource("4_vcsgt")
 metadata/_edit_group_ = true
 
