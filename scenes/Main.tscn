@@ -12,15 +12,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srqkv"]
 size = Vector2(1280, 50)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
+load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
+
 [node name="Main" type="Node" unique_id=1471843199]
 
 [node name="Background" parent="." unique_id=1679389528 instance=ExtResource("1_elqb8")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -8.0
-offset_right = 0.0
-offset_bottom = -8.0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = -3.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -79,3 +83,8 @@ scale = Vector2(10, 1)
 [node name="UntitledArtwork145" type="Sprite2D" parent="." unique_id=645079515]
 position = Vector2(51, 642)
 texture = ExtResource("6_nxtc6")
+
+[node name="GifTest" type="Sprite2D" parent="." unique_id=8636883]
+position = Vector2(97, 635)
+scale = Vector2(0.25211415, 0.29058468)
+texture = SubResource("CompressedTexture2D_c01mt")
