@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://clfjrvlttp5ai"]
 
-[ext_resource type="PackedScene" uid="uid://cux50outl2oga" path="res://scenes/background.tscn" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://db23ehr261vg2" path="res://scenes/block.tscn" id="4_rarhs"]
 [ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cneaktldabxin" path="res://scenes/platform.tscn" id="5_vcsgt"]
@@ -14,32 +13,28 @@ size = Vector2(1280, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nxtc6"]
+load_path = "res://.godot/imported/Untitled_Artwork-1 45.png-0f9727728f78c56fd36b26e8bbb13cdf.ctex"
+
 [node name="Main" type="Node" unique_id=1471843199]
 
-[node name="Background" parent="." unique_id=1679389528 instance=ExtResource("1_elqb8")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Mid" type="Parallax2D" parent="." unique_id=1318815832]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1627363704]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Mid" unique_id=1627363704]
 script = ExtResource("6_c01mt")
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="CharacterBody2D" unique_id=1967028994]
+[node name="ColorRect" type="ColorRect" parent="Mid/CharacterBody2D" unique_id=1967028994]
 offset_left = -10.0
 offset_top = -15.0
 offset_right = 10.0
 offset_bottom = 15.0
-color = Color(1, 1, 0, 1)
+color = Color(1, 0, 0, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1154627645]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mid/CharacterBody2D" unique_id=1154627645]
 shape = SubResource("CapsuleShape2D_ifug4")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1344637096]
+[node name="Camera2D" type="Camera2D" parent="Mid/CharacterBody2D" unique_id=1344637096]
 limit_left = 0
 limit_top = 0
 limit_bottom = 720
@@ -47,68 +42,96 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="Floor" type="StaticBody2D" parent="." unique_id=2063357415]
+[node name="Floor" type="StaticBody2D" parent="Mid" unique_id=2063357415]
 position = Vector2(504, 696)
 physics_material_override = ExtResource("4_vcsgt")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=228682613]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mid/Floor" unique_id=228682613]
 position = Vector2(136, 0)
 shape = SubResource("RectangleShape2D_srqkv")
 
-[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1049452797]
+[node name="ColorRect" type="ColorRect" parent="Mid/Floor" unique_id=1049452797]
 offset_left = -504.0
 offset_top = -25.0
 offset_right = 776.0
 offset_bottom = 25.0
+color = Color(1.0588765e-06, 0.4311493, 0.17558873, 1)
 
-[node name="Floor2" type="StaticBody2D" parent="." unique_id=2135708409]
+[node name="Floor2" type="StaticBody2D" parent="Mid" unique_id=2135708409]
 position = Vector2(1912, 696)
 physics_material_override = ExtResource("4_vcsgt")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" unique_id=1517472026]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mid/Floor2" unique_id=1517472026]
 position = Vector2(136, 0)
 shape = SubResource("RectangleShape2D_srqkv")
 
-[node name="ColorRect" type="ColorRect" parent="Floor2" unique_id=102892704]
+[node name="ColorRect" type="ColorRect" parent="Mid/Floor2" unique_id=102892704]
 offset_left = -504.0
 offset_top = -25.0
 offset_right = 776.0
 offset_bottom = 25.0
 
-[node name="Block1" parent="." unique_id=1469617117 instance=ExtResource("4_rarhs")]
+[node name="Block1" parent="Mid" unique_id=1469617117 instance=ExtResource("4_rarhs")]
 position = Vector2(529, 188)
 
-[node name="Block2" parent="." unique_id=892160298 instance=ExtResource("4_rarhs")]
+[node name="Block2" parent="Mid" unique_id=892160298 instance=ExtResource("4_rarhs")]
 position = Vector2(911, 128)
 
-[node name="Block3" parent="." unique_id=1412921279 instance=ExtResource("4_rarhs")]
+[node name="Block3" parent="Mid" unique_id=1412921279 instance=ExtResource("4_rarhs")]
 position = Vector2(226, 146)
 
-[node name="Block4" parent="." unique_id=374550645 instance=ExtResource("4_rarhs")]
+[node name="Block4" parent="Mid" unique_id=374550645 instance=ExtResource("4_rarhs")]
 position = Vector2(773, 86)
 
-[node name="Block5" parent="." unique_id=1345913697 instance=ExtResource("4_rarhs")]
+[node name="Block5" parent="Mid" unique_id=1345913697 instance=ExtResource("4_rarhs")]
 position = Vector2(362, 264)
 
-[node name="Platform1" parent="." unique_id=240914463 instance=ExtResource("5_vcsgt")]
+[node name="Platform1" parent="Mid" unique_id=240914463 instance=ExtResource("5_vcsgt")]
 position = Vector2(712, 368)
 scale = Vector2(20, 1)
 
-[node name="Platform2" parent="." unique_id=766685792 instance=ExtResource("5_vcsgt")]
+[node name="Platform2" parent="Mid" unique_id=766685792 instance=ExtResource("5_vcsgt")]
 position = Vector2(416, 504)
 scale = Vector2(10, 1)
 
-[node name="Platform3" parent="." unique_id=833214675 instance=ExtResource("5_vcsgt")]
+[node name="Platform3" parent="Mid" unique_id=833214675 instance=ExtResource("5_vcsgt")]
 position = Vector2(1312.0001, 512)
 scale = Vector2(20, 1)
 
-[node name="UntitledArtwork145" type="Sprite2D" parent="." unique_id=645079515]
-position = Vector2(51, 642)
+[node name="Front" type="Parallax2D" parent="." unique_id=1724353409]
+z_index = 1
+scroll_scale = Vector2(2, 2)
+repeat_size = Vector2(1000, 0)
+repeat_times = 3
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Front" unique_id=645079515]
+position = Vector2(232, 635)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_nxtc6")
 
-[node name="GifTest" type="Sprite2D" parent="." unique_id=8636883]
+[node name="GifTest" type="Sprite2D" parent="Front" unique_id=8636883]
 position = Vector2(97, 635)
 scale = Vector2(0.25211415, 0.29058468)
 texture = SubResource("CompressedTexture2D_c01mt")
+
+[node name="Back" type="Parallax2D" parent="." unique_id=600003334]
+z_index = -1
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(500, 0)
+repeat_times = 10
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Back" unique_id=1588072561]
+position = Vector2(840, 483)
+texture = SubResource("CompressedTexture2D_nxtc6")
+
+[node name="Backer" type="Parallax2D" parent="." unique_id=365368817]
+z_index = -2
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(500, 0)
+repeat_times = 10
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Backer" unique_id=523508531]
+position = Vector2(840, 483)
+texture = SubResource("CompressedTexture2D_nxtc6")

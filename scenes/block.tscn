@@ -5,7 +5,6 @@
 [node name="Block" type="RigidBody2D" unique_id=1469617117]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1564871932]
-visible = false
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
