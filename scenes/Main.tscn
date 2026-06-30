@@ -5,6 +5,7 @@
 [ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cneaktldabxin" path="res://scenes/platform.tscn" id="5_vcsgt"]
 [ext_resource type="Script" uid="uid://cioajasbe8blc" path="res://scenes/character_body_2d.gd" id="6_c01mt"]
+[ext_resource type="Texture2D" uid="uid://b3gftdv7lpv4a" path="res://iris art/Untitled_Artwork-1 45.png" id="6_nxtc6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
 
@@ -74,3 +75,7 @@ scale = Vector2(20, 1)
 [node name="Platform2" parent="." unique_id=766685792 instance=ExtResource("5_vcsgt")]
 position = Vector2(408, 504)
 scale = Vector2(10, 1)
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="." unique_id=645079515]
+position = Vector2(51, 642)
+texture = ExtResource("6_nxtc6")
