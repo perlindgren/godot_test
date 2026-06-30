@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cneaktldabxin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4t87"]
+resource_local_to_scene = true
+
+[node name="Platform" type="Area2D" unique_id=1533343676]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1334109600]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_v4t87")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=454180865]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2

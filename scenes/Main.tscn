@@ -3,12 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://cux50outl2oga" path="res://scenes/background.tscn" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://db23ehr261vg2" path="res://scenes/block.tscn" id="4_rarhs"]
 [ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://cneaktldabxin" path="res://scenes/platform.tscn" id="5_vcsgt"]
 [ext_resource type="Script" uid="uid://cioajasbe8blc" path="res://scenes/character_body_2d.gd" id="6_c01mt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srqkv"]
-size = Vector2(1000, 50)
+size = Vector2(1280, 50)
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -16,8 +17,9 @@ size = Vector2(1000, 50)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -8.0
 offset_right = 0.0
-offset_bottom = 0.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -36,17 +38,18 @@ color = Color(1, 1, 0, 1)
 shape = SubResource("CapsuleShape2D_ifug4")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=2063357415]
-position = Vector2(505, 694)
+position = Vector2(504, 688)
 physics_material_override = ExtResource("4_vcsgt")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=228682613]
+position = Vector2(136, 0)
 shape = SubResource("RectangleShape2D_srqkv")
 
 [node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1049452797]
-offset_left = -500.0
+offset_left = -504.0
 offset_top = -25.0
-offset_right = 500.0
+offset_right = 776.0
 offset_bottom = 25.0
 
 [node name="Block1" parent="." unique_id=1469617117 instance=ExtResource("4_rarhs")]
@@ -63,3 +66,11 @@ position = Vector2(773, 86)
 
 [node name="Block5" parent="." unique_id=1345913697 instance=ExtResource("4_rarhs")]
 position = Vector2(362, 264)
+
+[node name="Platform1" parent="." unique_id=240914463 instance=ExtResource("5_vcsgt")]
+position = Vector2(680, 368)
+scale = Vector2(20, 1)
+
+[node name="Platform2" parent="." unique_id=766685792 instance=ExtResource("5_vcsgt")]
+position = Vector2(408, 504)
+scale = Vector2(10, 1)
