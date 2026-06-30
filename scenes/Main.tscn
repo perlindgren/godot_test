@@ -72,6 +72,7 @@ offset_left = -504.0
 offset_top = -25.0
 offset_right = 776.0
 offset_bottom = 25.0
+color = Color(1.0588765e-06, 0.4311493, 0.17558873, 1)
 
 [node name="Block1" parent="Mid" unique_id=1469617117 instance=ExtResource("4_rarhs")]
 position = Vector2(529, 188)
@@ -126,12 +127,13 @@ repeat_times = 10
 position = Vector2(840, 483)
 texture = SubResource("CompressedTexture2D_nxtc6")
 
-[node name="Backer" type="Parallax2D" parent="." unique_id=365368817]
+[node name="Backest" type="Parallax2D" parent="." unique_id=365368817]
 z_index = -2
 scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(500, 0)
+repeat_size = Vector2(1000, 0)
 repeat_times = 10
 
-[node name="UntitledArtwork145" type="Sprite2D" parent="Backer" unique_id=523508531]
+[node name="UntitledArtwork145" type="Sprite2D" parent="Backest" unique_id=523508531]
 position = Vector2(840, 483)
+scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_nxtc6")
