@@ -4,6 +4,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -800.0
 
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var _camera = $Camera2D
 
 #func _process(_delta):
 	#if Input.is_action_pressed("right"):
@@ -15,11 +16,12 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		if _animated_sprite.frame == 3:
+		if _animated_sprite.frame == 4:
 			_animated_sprite.stop()
 
 	if Input.is_action_just_pressed("jump"):
 		print("jump pressed")
+		print(_camera.offset)
 	
 	# Handle jump.
 	if Input.is_action_just_pressed(&"jump") and is_on_floor():

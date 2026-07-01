@@ -6,9 +6,9 @@
 [ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cneaktldabxin" path="res://scenes/platform.tscn" id="5_vcsgt"]
 [ext_resource type="Script" uid="uid://cioajasbe8blc" path="res://scenes/character_body_2d.gd" id="6_c01mt"]
-[ext_resource type="Texture2D" uid="uid://cf3mdvr2x4tcn" path="res://iris art/background/Untitled_Artwork-2 5.png" id="6_jlsqs"]
-[ext_resource type="Texture2D" uid="uid://b3gftdv7lpv4a" path="res://iris art/Untitled_Artwork-1 45.png" id="6_nxtc6"]
 [ext_resource type="Texture2D" uid="uid://dmcp4sdcu5d5w" path="res://iris art/background/Background 1080-3840.png" id="7_nxtc6"]
+[ext_resource type="Texture2D" uid="uid://djg3m1uebubu" path="res://iris art/foreground.png" id="7_q8u5g"]
+[ext_resource type="Texture2D" uid="uid://buy48i3rm2x30" path="res://iris art/background/middleground house.png" id="8_q8u5g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjd11"]
 atlas = ExtResource("2_q8u5g")
@@ -56,8 +56,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3p2gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p2gp")
 }],
-"loop": 1,
+"loop": 2,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -80,12 +83,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
+radius = 40.0
+height = 128.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srqkv"]
-size = Vector2(1280, 50)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
-load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
+size = Vector2(1776, 50)
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -99,27 +101,22 @@ metadata/_edit_group_ = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_srqkv")
 animation = &"jump"
-
-[node name="ColorRect" type="ColorRect" parent="Mid/CharacterBody2D" unique_id=1967028994]
-offset_left = -10.0
-offset_top = -15.0
-offset_right = 10.0
-offset_bottom = 15.0
-color = Color(1, 0, 0, 1)
+frame_progress = 0.49610573
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mid/CharacterBody2D" unique_id=1154627645]
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ifug4")
 
 [node name="Camera2D" type="Camera2D" parent="Mid/CharacterBody2D" unique_id=1344637096]
 limit_left = 0
 limit_top = 0
-limit_bottom = 720
+limit_bottom = 1080
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Floor" type="StaticBody2D" parent="Mid" unique_id=2063357415]
-position = Vector2(504, 696)
+position = Vector2(504, 1051)
 physics_material_override = ExtResource("4_vcsgt")
 metadata/_edit_group_ = true
 
@@ -128,25 +125,25 @@ position = Vector2(136, 0)
 shape = SubResource("RectangleShape2D_srqkv")
 
 [node name="ColorRect" type="ColorRect" parent="Mid/Floor" unique_id=1049452797]
-offset_left = -504.0
+offset_left = -768.0
 offset_top = -25.0
-offset_right = 776.0
+offset_right = 1024.0
 offset_bottom = 25.0
 color = Color(0, 0.16078432, 0, 1)
 
 [node name="Floor2" type="StaticBody2D" parent="Mid" unique_id=2135708409]
-position = Vector2(1912, 696)
+position = Vector2(2120, 1051)
 physics_material_override = ExtResource("4_vcsgt")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mid/Floor2" unique_id=1517472026]
-position = Vector2(136, 0)
+position = Vector2(384, 0)
 shape = SubResource("RectangleShape2D_srqkv")
 
 [node name="ColorRect" type="ColorRect" parent="Mid/Floor2" unique_id=102892704]
 offset_left = -504.0
 offset_top = -25.0
-offset_right = 776.0
+offset_right = 1280.0
 offset_bottom = 25.0
 color = Color(0, 0.16078432, 0, 1)
 
@@ -166,49 +163,45 @@ position = Vector2(773, 86)
 position = Vector2(362, 264)
 
 [node name="Platform1" parent="Mid" unique_id=240914463 instance=ExtResource("5_vcsgt")]
-position = Vector2(712, 368)
+position = Vector2(712, 723)
 scale = Vector2(20, 1)
 
 [node name="Platform2" parent="Mid" unique_id=766685792 instance=ExtResource("5_vcsgt")]
-position = Vector2(416, 504)
+position = Vector2(416, 859)
 scale = Vector2(10, 1)
 
 [node name="Platform3" parent="Mid" unique_id=833214675 instance=ExtResource("5_vcsgt")]
-position = Vector2(1312.0001, 512)
+position = Vector2(1312.0001, 867)
 scale = Vector2(20, 1)
 
-[node name="Front" type="Parallax2D" parent="." unique_id=1724353409]
+[node name="Foreground" type="Parallax2D" parent="." unique_id=1724353409]
 z_index = 1
 scroll_scale = Vector2(2, 2)
-repeat_size = Vector2(1000, 0)
+scroll_offset = Vector2(0, 226)
+repeat_size = Vector2(3836, 0)
 repeat_times = 3
 
-[node name="UntitledArtwork145" type="Sprite2D" parent="Front" unique_id=645079515]
-position = Vector2(232, 635)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("6_nxtc6")
-
-[node name="GifTest" type="Sprite2D" parent="Front" unique_id=8636883]
-position = Vector2(97, 635)
-scale = Vector2(0.25211415, 0.29058468)
-texture = SubResource("CompressedTexture2D_c01mt")
+[node name="Sprite2D" type="Sprite2D" parent="Foreground" unique_id=1170407967]
+position = Vector2(0, 540)
+texture = ExtResource("7_q8u5g")
 
 [node name="Back" type="Parallax2D" parent="." unique_id=600003334]
 z_index = -1
 scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(1920, 0)
+repeat_size = Vector2(3836, 0)
 repeat_times = 10
 
-[node name="UntitledArtwork145" type="Sprite2D" parent="Back" unique_id=1588072561]
-position = Vector2(840, 483)
-texture = ExtResource("6_jlsqs")
+[node name="City" type="Sprite2D" parent="Back" unique_id=1588072561]
+position = Vector2(0, 540)
+texture = ExtResource("8_q8u5g")
 
 [node name="Backest" type="Parallax2D" parent="." unique_id=365368817]
 z_index = -2
 scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(0, 8)
 repeat_size = Vector2(1920, 0)
 repeat_times = 10
 
-[node name="UntitledArtwork145" type="Sprite2D" parent="Backest" unique_id=523508531]
-position = Vector2(827, 434)
+[node name="Clouds" type="Sprite2D" parent="Backest" unique_id=523508531]
+position = Vector2(0, 536)
 texture = ExtResource("7_nxtc6")
