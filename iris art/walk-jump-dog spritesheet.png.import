@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gtbodc50f2vt"
-path="res://.godot/imported/spritesheet(3).png-7cab8285fc157666e3e7dc45120dbee1.ctex"
+path="res://.godot/imported/walk-jump-dog spritesheet.png-9643f4fc9c5a83acc4b46d18f97b87e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://iris art/spritesheet(3).png"
-dest_files=["res://.godot/imported/spritesheet(3).png-7cab8285fc157666e3e7dc45120dbee1.ctex"]
+source_file="res://iris art/walk-jump-dog spritesheet.png"
+dest_files=["res://.godot/imported/walk-jump-dog spritesheet.png-9643f4fc9c5a83acc4b46d18f97b87e4.ctex"]
 
 [params]
 
