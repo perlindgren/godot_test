@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cioajasbe8blc" path="res://scenes/character_body_2d.gd" id="6_c01mt"]
 [ext_resource type="Texture2D" uid="uid://cf3mdvr2x4tcn" path="res://iris art/background/Untitled_Artwork-2 5.png" id="6_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://b3gftdv7lpv4a" path="res://iris art/Untitled_Artwork-1 45.png" id="6_nxtc6"]
-[ext_resource type="Texture2D" uid="uid://ca2wtntehucg5" path="res://iris art/background/Untitled_Artwork-1 5.png" id="7_q8u5g"]
+[ext_resource type="Texture2D" uid="uid://dmcp4sdcu5d5w" path="res://iris art/background/Background 1080-3840.png" id="7_nxtc6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
 
@@ -14,6 +14,7 @@
 size = Vector2(1280, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
+load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -134,4 +135,4 @@ repeat_times = 10
 
 [node name="UntitledArtwork145" type="Sprite2D" parent="Backest" unique_id=523508531]
 position = Vector2(840, 483)
-texture = ExtResource("7_q8u5g")
+texture = ExtResource("7_nxtc6")
