@@ -4,7 +4,9 @@
 [ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cneaktldabxin" path="res://scenes/platform.tscn" id="5_vcsgt"]
 [ext_resource type="Script" uid="uid://cioajasbe8blc" path="res://scenes/character_body_2d.gd" id="6_c01mt"]
+[ext_resource type="Texture2D" uid="uid://cf3mdvr2x4tcn" path="res://iris art/background/Untitled_Artwork-2 5.png" id="6_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://b3gftdv7lpv4a" path="res://iris art/Untitled_Artwork-1 45.png" id="6_nxtc6"]
+[ext_resource type="Texture2D" uid="uid://ca2wtntehucg5" path="res://iris art/background/Untitled_Artwork-1 5.png" id="7_q8u5g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
 
@@ -12,10 +14,6 @@
 size = Vector2(1280, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
-load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nxtc6"]
-load_path = "res://.godot/imported/Untitled_Artwork-1 45.png-0f9727728f78c56fd36b26e8bbb13cdf.ctex"
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -57,7 +55,7 @@ offset_left = -504.0
 offset_top = -25.0
 offset_right = 776.0
 offset_bottom = 25.0
-color = Color(1.0588765e-06, 0.4311493, 0.17558873, 1)
+color = Color(0, 0.16078432, 0, 1)
 
 [node name="Floor2" type="StaticBody2D" parent="Mid" unique_id=2135708409]
 position = Vector2(1912, 696)
@@ -73,7 +71,7 @@ offset_left = -504.0
 offset_top = -25.0
 offset_right = 776.0
 offset_bottom = 25.0
-color = Color(1.0588765e-06, 0.4311493, 0.17558873, 1)
+color = Color(0, 0.16078432, 0, 1)
 
 [node name="Block1" parent="Mid" unique_id=1469617117 instance=ExtResource("4_rarhs")]
 position = Vector2(529, 188)
@@ -121,20 +119,19 @@ texture = SubResource("CompressedTexture2D_c01mt")
 [node name="Back" type="Parallax2D" parent="." unique_id=600003334]
 z_index = -1
 scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(500, 0)
+repeat_size = Vector2(1920, 0)
 repeat_times = 10
 
 [node name="UntitledArtwork145" type="Sprite2D" parent="Back" unique_id=1588072561]
 position = Vector2(840, 483)
-texture = SubResource("CompressedTexture2D_nxtc6")
+texture = ExtResource("6_jlsqs")
 
 [node name="Backest" type="Parallax2D" parent="." unique_id=365368817]
 z_index = -2
 scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(1000, 0)
+repeat_size = Vector2(1920, 0)
 repeat_times = 10
 
 [node name="UntitledArtwork145" type="Sprite2D" parent="Backest" unique_id=523508531]
 position = Vector2(840, 483)
-scale = Vector2(2, 2)
-texture = SubResource("CompressedTexture2D_nxtc6")
+texture = ExtResource("7_q8u5g")
