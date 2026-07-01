@@ -85,6 +85,7 @@ animations = [{
 size = Vector2(1280, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
+load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -209,5 +210,5 @@ repeat_size = Vector2(1920, 0)
 repeat_times = 10
 
 [node name="UntitledArtwork145" type="Sprite2D" parent="Backest" unique_id=523508531]
-position = Vector2(840, 483)
+position = Vector2(827, 434)
 texture = ExtResource("7_nxtc6")
