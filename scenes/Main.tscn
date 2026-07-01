@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://clfjrvlttp5ai"]
 
+[ext_resource type="Texture2D" uid="uid://bif61n1peet2t" path="res://iris art/walk.spritesheet.png" id="2_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://gtbodc50f2vt" path="res://iris art/walk-jump-dog spritesheet.png" id="2_q8u5g"]
 [ext_resource type="PackedScene" uid="uid://db23ehr261vg2" path="res://scenes/block.tscn" id="4_rarhs"]
 [ext_resource type="PhysicsMaterial" uid="uid://jk5df1llr4ih" path="res://scenes/new_physics_material.tres" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cneaktldabxin" path="res://scenes/platform.tscn" id="5_vcsgt"]
@@ -8,13 +10,81 @@
 [ext_resource type="Texture2D" uid="uid://b3gftdv7lpv4a" path="res://iris art/Untitled_Artwork-1 45.png" id="6_nxtc6"]
 [ext_resource type="Texture2D" uid="uid://dmcp4sdcu5d5w" path="res://iris art/background/Background 1080-3840.png" id="7_nxtc6"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjd11"]
+atlas = ExtResource("2_q8u5g")
+region = Rect2(0, 0, 512, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmy6f"]
+atlas = ExtResource("2_q8u5g")
+region = Rect2(512, 0, 512, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwfav"]
+atlas = ExtResource("2_q8u5g")
+region = Rect2(1024, 0, 512, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p2gp"]
+atlas = ExtResource("2_q8u5g")
+region = Rect2(1536, 0, 512, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlsqs"]
+atlas = ExtResource("2_jlsqs")
+region = Rect2(0, 0, 473, 308)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8u5g"]
+atlas = ExtResource("2_jlsqs")
+region = Rect2(473, 0, 473, 308)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhr70"]
+atlas = ExtResource("2_jlsqs")
+region = Rect2(946, 0, 473, 308)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp0k4"]
+atlas = ExtResource("2_jlsqs")
+region = Rect2(1419, 0, 473, 308)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_srqkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjd11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmy6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwfav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p2gp")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlsqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8u5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhr70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp0k4")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifug4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srqkv"]
 size = Vector2(1280, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c01mt"]
-load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7.ctex"
 
 [node name="Main" type="Node" unique_id=1471843199]
 
@@ -23,6 +93,11 @@ load_path = "res://.godot/imported/gif test.png-1dc22efe7a4a8a5f827abfdff18dd4a7
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Mid" unique_id=1627363704]
 script = ExtResource("6_c01mt")
 metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mid/CharacterBody2D" unique_id=1105685324]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_srqkv")
+animation = &"jump"
 
 [node name="ColorRect" type="ColorRect" parent="Mid/CharacterBody2D" unique_id=1967028994]
 offset_left = -10.0
